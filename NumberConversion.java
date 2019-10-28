@@ -1,7 +1,6 @@
 import java.util.*;
 public class NumberConversion {
-
-	public static void main(String[] args) {
+        public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		String answer = "";
 		do {
@@ -120,8 +119,6 @@ public class NumberConversion {
 				}
 			}while(invalid);
 			
-			
-			
 			invalid = true;
 			while(invalid) {
 				System.out.println("Try again?(y/n)");
@@ -138,12 +135,9 @@ public class NumberConversion {
 				System.out.println("\nThank you");
 			} 
 		
-		}while(answer.equalsIgnoreCase("y"));
-		
-		
+		} while(answer.equalsIgnoreCase("y"));
 		in.close();
 	}
-	
 	
 	public static long dec2bin (int x) {
 		if(x == 0) {
@@ -154,7 +148,6 @@ public class NumberConversion {
 		}
 			
 	}
-	
 	
 	public static String dec2hex (String n) {
 		String result = "";
@@ -191,7 +184,6 @@ public class NumberConversion {
 		}		
 	}
 	
-	
 	public static int bin2dec(String bin) {
 		int x = 0;
 		int length = bin.length();
@@ -202,7 +194,6 @@ public class NumberConversion {
 		}
 		return x;
 	}
-	
 	
 	public static int hex2dec(String hex, int power, int t){
 		int x=0;
@@ -234,7 +225,6 @@ public class NumberConversion {
 			return n;
 		}
 	}
-	
 	
 	public static void intro() {
 		System.out.println("Number conversion Systems\n");

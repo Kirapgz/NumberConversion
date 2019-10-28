@@ -1,5 +1,7 @@
 # NumberConversion
-A Java program for converting decimal to binary, decimal to hexadecimal, binary to decimal and hexadecimal to decimal. Any improvements are welcome (as I'am such an amateur programmer)
+A Java program for converting decimal to binary, decimal to hexadecimal, binary to decimal and hexadecimal to decimal. Any improvements are welcome.
+
+The program is created using Eclipse IDE
 
 This program is actually for my assessment work. So it look so messy and incomprehensible. One of the requirements is that the program should be error proof, so I've tried to think all possible errors that could happened when user input numbers. 
 

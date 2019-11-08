@@ -12,5 +12,6 @@ The list of possible errors that I could think of are:-
   4) User input double values or letters other than ABCDEF when converting hexadecimal value to decimal.
   5) User input special characters (eg: @, $, #)
   6) User input lowercase letters (eg: a instead of A) i.e. lowercase letters is not equal to uppercase letters.
+  [UPDATE] 7) User input negative values for conversion.
   
 Also another requirement is that each conversion must be carried out by recursion method.

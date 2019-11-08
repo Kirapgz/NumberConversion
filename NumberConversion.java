@@ -1,6 +1,17 @@
+/* Assignment 2 - Number Conversion System.
+ * 
+ * Name: Dayangku Nur Aqilah Syakirah Binti Pengiran Zulkifli
+ * Course: BSc in Digital Media (1st Year)
+ * Roll number: B20190074
+ * Programming I 
+ * 2019
+ * 
+ * */
+
 import java.util.*;
 public class NumberConversion {
-        public static void main(String[] args) {
+
+	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		String answer = "";
 		do {
@@ -31,8 +42,15 @@ public class NumberConversion {
 	 						System.out.println("[Decimal to Binary]");
 							System.out.println("Enter the value: ");
 							ans = in.nextInt();
-							invalid = false;
-							b = false;
+							
+							if(ans > 0) {
+								invalid = false;
+								b = false;
+							}
+							else {
+								in.nextLine();
+								System.out.println("\nInvalid input. Please try again.");
+							}
 						}
 						catch(InputMismatchException e){
 							in.nextLine();
@@ -50,10 +68,17 @@ public class NumberConversion {
 							System.out.println("[Decimal to Hexadecimal]");
 							System.out.println("Enter the value: ");
 							String ans2 = in.next();
-							System.out.println(ans2 + " = " + dec2hex(ans2));
-							System.out.println();
-							invalid = false;
-							c = false;
+							
+							if(Integer.parseInt(ans2) > 0) {
+								System.out.println(ans2 + " = " + dec2hex(ans2));
+								System.out.println();
+								invalid = false;
+								c = false;
+							}
+							else {
+								in.nextLine();
+								System.out.println("\nInvalid input. Please try again.");
+							}
 						}
 						catch(NumberFormatException e) {
 							in.nextLine();
@@ -68,7 +93,7 @@ public class NumberConversion {
 						System.out.println("[Binary to Decimal]");
 						System.out.println("Enter the value: ");
 						String ans3 = in.next();
-						if (ans3.matches("[01]+") && !ans3.startsWith("0")) {
+						if (ans3.matches("[01]+")) {
 							System.out.println(ans3 + " = " + bin2dec(ans3));
 							System.out.println();
 							invalid = false;
@@ -119,6 +144,8 @@ public class NumberConversion {
 				}
 			}while(invalid);
 			
+			
+			
 			invalid = true;
 			while(invalid) {
 				System.out.println("Try again?(y/n)");
@@ -135,9 +162,12 @@ public class NumberConversion {
 				System.out.println("\nThank you");
 			} 
 		
-		} while(answer.equalsIgnoreCase("y"));
+		}while(answer.equalsIgnoreCase("y"));
+		
+		
 		in.close();
 	}
+	
 	
 	public static long dec2bin (int x) {
 		if(x == 0) {
@@ -148,6 +178,7 @@ public class NumberConversion {
 		}
 			
 	}
+	
 	
 	public static String dec2hex (String n) {
 		String result = "";
@@ -184,6 +215,7 @@ public class NumberConversion {
 		}		
 	}
 	
+	
 	public static int bin2dec(String bin) {
 		int x = 0;
 		int length = bin.length();
@@ -194,6 +226,7 @@ public class NumberConversion {
 		}
 		return x;
 	}
+	
 	
 	public static int hex2dec(String hex, int power, int t){
 		int x=0;

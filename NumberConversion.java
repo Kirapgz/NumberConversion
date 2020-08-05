@@ -1,12 +1,3 @@
-/* Assignment 2 - Number Conversion System.
- * 
- * Name: Dayangku Nur Aqilah Syakirah Binti Pengiran Zulkifli
- * Course: BSc in Digital Media (1st Year)
- * Roll number: B20190074
- * Programming I 
- * 2019
- * 
- * */
 
 import java.util.*;
 public class NumberConversion {
